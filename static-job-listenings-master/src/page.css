@@ -1,0 +1,45 @@
+header {
+    background-color: rgb(31, 156, 158);
+    background-image: url(../../images/bg-header-desktop.svg);
+    height: 100px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.body {
+    align-items: center;
+    background-color: rgb(204, 236, 236); 
+    justify-content: center;
+}
+
+@media only screen and (max-width: 750px) {
+
+    header {
+        height: 150px; 
+    }
+    .content {
+        gap: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

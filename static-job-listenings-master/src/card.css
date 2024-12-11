@@ -1,0 +1,143 @@
+.card {
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 600px;
+}
+
+.card:hover {
+    border-left: 3px solid rgb(31, 156, 158);
+}
+
+.card-left {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.logo-div {
+    background-image: url('../src/images/account.svg');  
+    border-radius: 50px;
+    width: 40px;
+}
+
+.all-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.general-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.company {
+    color: rgb(31, 156, 158);
+    font-size: 14px;
+    font-weight: bold;
+    text-align: start;
+}
+
+.new {
+    background-color: rgb(31, 156, 158);
+    border-radius: 20px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.featured {
+    background-color: rgb(1, 21, 21);
+    border-radius: 20px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.position {
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: start;
+}
+
+.publish-info {
+    color: grey;
+    font-size: 10px;
+    text-align: start;
+}
+
+.separator {
+    display: none;
+}
+
+.all-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width:300px
+}
+
+.info {
+    background-color: rgb(220, 243, 243);
+    border-radius: 5px;
+    color: rgb(31, 156, 158);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+}  
+
+.info:hover {
+    background-color: rgb(19, 23, 23);
+    color: rgb(255, 255, 255);
+}  
+
+@media only screen and (max-width: 750px) {
+    .card {
+        width: 450px;
+    }
+
+    .all-tags {
+        width:150px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .card {
+        flex-direction: column;
+        position: relative;
+        width: 80%;
+    }
+
+    .all-tags {
+        width:100%
+    }
+
+    .separator {
+        background-color: grey;
+        display: block;
+        height: 0.5px;
+        margin: 10px 0px;
+        width: 100%;
+    }
+
+    .card-left {
+        width: 100%;
+    }
+
+    .logo-div {
+      border-radius: 50%;;
+      margin-top: -50px;
+    }
+
+}
