@@ -8,10 +8,18 @@
     padding: 20px;
     width: 600px;
 }
-
 .card:hover {
     border-left: 3px solid rgb(31, 156, 158);
 }
+.card-dark {
+    background-color: rgba(114, 154, 154, 0.374);
+}
+
+.card-dark:hover {
+    border-left: 3px solid rgb(255, 255, 255); 
+}
+
+
 
 .card-left {
     display: flex;
@@ -21,8 +29,9 @@
 
 .logo-div {
     background-image: url('../src/images/account.svg');  
-    border-radius: 50px;
-    width: 40px;
+    border-radius: 50%;
+    padding: 30px;
+    width: 20px;
 }
 
 .all-info {
@@ -41,6 +50,10 @@
     font-size: 14px;
     font-weight: bold;
     text-align: start;
+}
+
+.company-dark {
+    color : rgb(201, 229, 229);
 }
 
 .new {
@@ -69,10 +82,18 @@
     text-align: start;
 }
 
+.position-dark {
+    color: white;
+}
+
 .publish-info {
     color: grey;
     font-size: 10px;
     text-align: start;
+}
+
+.publish-dark {
+    color: rgb(201, 197, 197);
 }
 
 .separator {
@@ -100,7 +121,16 @@
 .info:hover {
     background-color: rgb(19, 23, 23);
     color: rgb(255, 255, 255);
-}  
+}
+
+.dark-info:hover {
+    color: rgb(19, 23, 23);
+    background-color: rgb(153, 206, 204);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
 
 @media only screen and (max-width: 750px) {
     .card {
@@ -115,7 +145,6 @@
 @media only screen and (max-width: 500px) {
     .card {
         flex-direction: column;
-        position: relative;
         width: 80%;
     }
 

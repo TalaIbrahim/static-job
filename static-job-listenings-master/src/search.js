@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./search.css";
 
-function Search ({ filters, addFilter, removeFilter, clearFilters }) {
+function Search ({ filters, addFilter, removeFilter, clearFilters ,darkMode }) {
 
     const [inputValue, setInputValue] = useState("");
 
@@ -14,7 +14,7 @@ function Search ({ filters, addFilter, removeFilter, clearFilters }) {
       };
 
       return (
-        <div className="search">
+        <div className={`search ${darkMode ? "search-dark" : ""}`}>
          <div className="selected-div">
             {filters.map((filter) => (
               <div className="selected" >
@@ -35,7 +35,7 @@ function Search ({ filters, addFilter, removeFilter, clearFilters }) {
             />
           </div>
           {filters.length > 0 && (
-            <div className="clear" onClick={clearFilters}>
+            <div className={`clear ${darkMode ? "clear-dark" : ""}`} onClick={clearFilters}>
               Clear
             </div>
           )}

@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./card";
 import "./list.css";
 
-function List ({ jobs, filters }) {
+function List ({ jobs, filters ,darkMode  }) {
 
     const filtering = () => {
         if (filters.length === 0) {
@@ -21,7 +21,7 @@ function List ({ jobs, filters }) {
       return (
         <div className="list">
             {filtering().map ( (job)=>(
-                <Card job={job}></Card>
+                <Card job={job} darkMode={darkMode}></Card>
             )) }
         </div>
       );

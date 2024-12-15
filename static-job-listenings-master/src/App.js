@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {  useState  } from "react";
 import List from './list';
 import Search from './search';
 import './App.css';
@@ -8,6 +8,8 @@ import data from './data.json'
 function App() {
   const [filters, setFilters] = useState([]);
   const jobs = data;
+
+  const [darkMode, setDarkMode] = useState(false);
 
 
   const addFilter = (filter) => {
@@ -24,12 +26,21 @@ function App() {
     setFilters([]);
   };
 
+  const toggleMode = () => {
+    setDarkMode(!darkMode);
+  }
+
+
+
   return (
-    <div className="App">
-      <header>
-        
+    <div className={`App`}>
+      <header className={`${darkMode ? "dark-mode" : ""}`}>
+        <div className="mode" onClick={toggleMode}>
+          {darkMode? '☀️' :'⏾'}
+        </div>
       </header>
-      <div className="body">
+      
+      <div className={`body ${darkMode ? "body-dark" : ""}`}>
         
         <div className="container">
           <div className="content">
@@ -39,10 +50,11 @@ function App() {
               addFilter={addFilter} 
               removeFilter={removeFilter} 
               clearFilters={clearFilters} 
+              darkMode = {darkMode}
             />
 
             {/* The Tools */}
-            <List filters={filters} jobs={jobs} />
+            <List filters={filters} jobs={jobs} darkMode={darkMode} />
             </div>
 
         </div>
